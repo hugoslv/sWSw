@@ -12,7 +12,7 @@ def tostring(data):
     if dtype=='ndarray':
         if pylab.shape(data)!=(): data=list(data)
         else: data='"'+data.tostring()+'"'
-    elif dtype=='dict' or dtype=='tuple' or dtype='str' or dtype=='unicode':
+    elif dtype=='dict' or dtype=='tuple' or dtype=='str' or dtype=='unicode':
         data=json.dumps(data)
     elif dtype=='NoneType':
         data=''
